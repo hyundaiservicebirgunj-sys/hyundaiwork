@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saniya Enterprises | Authorized Hyundai Workshop Birgunj</title>
+
+<meta name="description" content="Authorized Hyundai Workshop in Birgunj Nepal. Book Hyundai service online. Search hyundaibirgunj">
+<meta name="keywords" content="hyundaibirgunj, Hyundai Service Birgunj, Saniya Enterprises">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hyundai_Motor_Company_logo.svg">
+
+<style>
+body {margin:0;font-family:Arial;background:#f5f5f5;}
+header {background:#002c5f;color:white;padding:20px;display:flex;gap:20px;align-items:center;}
+header img {height:60px;background:white;padding:5px;border-radius:4px;}
+main {max-width:1000px;margin:auto;background:white;padding:30px;}
+h2 {color:#002c5f;}
+input,select,textarea,button {width:100%;padding:12px;margin-top:10px;}
+button {background:#002c5f;color:white;border:none;cursor:pointer;}
+button:hover {background:#004a99;}
+.card {background:#f1f1f1;padding:15px;border-radius:6px;}
+.contact-box {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.whatsapp {position:fixed;bottom:20px;right:20px;background:#25d366;color:white;
+padding:15px;border-radius:50%;font-size:22px;text-decoration:none;}
+footer {background:#002c5f;color:white;text-align:center;padding:15px;}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hyundai_Motor_Company_logo.svg">
+<div>
+<h1>Saniya Enterprises</h1>
+<p>Authorized Hyundai Workshop – Birgunj, Nepal</p>
+</div>
+</header>
+
+<main>
+
+<section>
+<h2>Book Hyundai Service</h2>
+
+<form id="serviceForm">
+<input type="text" id="name" placeholder="Customer Name" required>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+<input type="email" id="email" placeholder="Email (optional)">
+<input type="text" id="vehicle" placeholder="Hyundai Vehicle Model" required>
+<input type="date" id="date" required>
+<textarea id="problem" rows="4" placeholder="Service Details / Problem"></textarea>
+<button type="submit">Book Service</button>
+</form>
+
+<p id="msg" style="font-weight:bold;color:green;"></p>
+</section>
+
+<section>
+<h2>Contact Information</h2>
+<div class="contact-box">
+<div class="card">
+<strong>Address</strong><br>
+Murli-13, Birgunj, Nepal<br>
+Opposite Siddhartha School
+</div>
+
+<div class="card">
+<strong>Email</strong><br>
+hyundaiservicebirgunj@gmail.com
+</div>
+
+<div class="card">
+<strong>Call Us</strong><br>
+📞 9801121471<br>
+📞 9704598000
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+© 2026 Saniya Enterprises | Google Search: <strong>hyundaibirgunj</strong>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/9779704598000" target="_blank">💬</a>
+
+<script>
+document.getElementById("serviceForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let email = document.getElementById("email").value;
+    let vehicle = document.getElementById("vehicle").value;
+    let date = document.getElementById("date").value;
+    let problem = document.getElementById("problem").value;
+
+    let message =
+`Hyundai Service Booking Request
+-------------------------
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Vehicle: ${vehicle}
+Preferred Date: ${date}
+Problem: ${problem}`;
+
+    /* EMAIL */
+    let mailtoLink =
+`mailto:hyundaiservicebirgunj@gmail.com
+?subject=Hyundai Service Booking - ${name}
+&body=${encodeURIComponent(message)}`;
+
+    window.location.href = mailtoLink;
+
+    /* WHATSAPP */
+    let whatsappLink =
+`https://wa.me/9779704598000?text=${encodeURIComponent(message)}`;
+
+    setTimeout(() => {
+        window.open(whatsappLink, "_blank");
+    }, 800);
+
+    document.getElementById("msg").textContent =
+        "Booking details sent via Email and WhatsApp successfully.";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
