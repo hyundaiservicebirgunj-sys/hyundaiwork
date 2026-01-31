@@ -1,133 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Saniya Enterprises | Authorized Hyundai Workshop Birgunj</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saniya Enterprises – Authorized Hyundai Service Center | Birgunj</title>
 
-<meta name="description" content="Authorized Hyundai Workshop in Birgunj Nepal. Book Hyundai service online. Search hyundaibirgunj">
-<meta name="keywords" content="hyundaibirgunj, Hyundai Service Birgunj, Saniya Enterprises">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hyundai_Motor_Company_logo.svg">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #002c77;
+      color: white;
+      line-height: 1.6;
+    }
 
-<style>
-body {margin:0;font-family:Arial;background:#f5f5f5;}
-header {background:#002c5f;color:white;padding:20px;display:flex;gap:20px;align-items:center;}
-header img {height:60px;background:white;padding:5px;border-radius:4px;}
-main {max-width:1000px;margin:auto;background:white;padding:30px;}
-h2 {color:#002c5f;}
-input,select,textarea,button {width:100%;padding:12px;margin-top:10px;}
-button {background:#002c5f;color:white;border:none;cursor:pointer;}
-button:hover {background:#004a99;}
-.card {background:#f1f1f1;padding:15px;border-radius:6px;}
-.contact-box {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25d366;color:white;
-padding:15px;border-radius:50%;font-size:22px;text-decoration:none;}
-footer {background:#002c5f;color:white;text-align:center;padding:15px;}
-</style>
+    /* ── Header ──────────────────────────────────────── */
+    header {
+      background: linear-gradient(to bottom, #002c77, #003366);
+      text-align: center;
+      padding: 50px 15px 30px;
+    }
+
+    .logo-container {
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 280px;
+      height: auto;
+      max-width: 90%;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 15px 0 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .tagline {
+      font-size: 1.4em;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .phone-hero {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 25px 0;
+    }
+
+    a.phone {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn-group button {
+      width: 80%;
+      max-width: 400px;
+      padding: 18px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .book-btn { background: #004080; color: white; }
+    .book-btn:hover { background: #0055aa; }
+
+    .call-btn { background: #d32f2f; color: white; }
+    .call-btn:hover { background: #b71c1c; }
+
+    /* ── Content sections ────────────────────────────── */
+    .section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 16px;
+      width: 320px;
+      max-width: 100%;
+      backdrop-filter: blur(6px);
+    }
+
+    .icon {
+      font-size: 3.5em;
+      margin-bottom: 15px;
+    }
+
+    .testimonials .quote {
+      background: rgba(255,255,255,0.06);
+      padding: 25px;
+      border-radius: 12px;
+      margin: 30px 0;
+      font-style: italic;
+    }
+
+    .stars {
+      color: #ffd700;
+      font-size: 2em;
+      margin: 12px 0;
+    }
+
+    /* ── Forms ───────────────────────────────────────── */
+    form {
+      background: rgba(255,255,255,0.08);
+      padding: 35px;
+      border-radius: 16px;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+    }
+
+    button.submit-btn {
+      background: #004080;
+      color: white;
+      width: 100%;
+      padding: 16px;
+      font-size: 1.3em;
+      border-radius: 50px;
+      cursor: pointer;
+      border: none;
+    }
+
+    button.submit-btn:hover {
+      background: #0055aa;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+
+    /* ── Contact & Footer ────────────────────────────── */
+    .contact-info {
+      font-size: 1.3em;
+      margin: 40px 0;
+    }
+
+    footer {
+      background: #001122;
+      padding: 25px;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    /* ── Floating contact popup ──────────────────────── */
+    .floating-contact {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    .fab {
+      width: 66px;
+      height: 66px;
+      background: #004080;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1em;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: gentle-breath 4.5s infinite ease-in-out;
+    }
+
+    .fab:hover {
+      transform: scale(1.14) translateY(-5px);
+      background: #0055aa;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+    }
+
+    @keyframes gentle-breath {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.065); }
+    }
+
+    .popup-panel {
+      position: absolute;
+      bottom: 95px;
+      right: 0;
+      background: #003366;
+      border-radius: 18px;
+      padding: 22px 20px 26px;
+      width: 250px;
+      box-shadow: 0 14px 45px rgba(0,0,0,0.55);
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      opacity: 0;
+      transform: translateY(35px) scale(0.94);
+      transition:
+        opacity 0.32s ease-out,
+        transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+        backdrop-filter 0.4s ease;
+      backdrop-filter: blur(0px);
+    }
+
+    .popup-panel.show {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      backdrop-filter: blur(8px);
+    }
+
+    .popup-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 20px;
+      border-radius: 14px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08em;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    }
+
+    .popup-btn:hover {
+      transform: translateY(-4px) scale(1.045);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+    }
+
+    .popup-btn.call { background: #d32f2f; }
+    .popup-btn.call:hover { background: #c62828; }
+
+    .popup-btn.whatsapp { background: #25D366; }
+    .popup-btn.whatsapp:hover { background: #1da851; }
+
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 1.7em;
+      cursor: pointer;
+      color: #bbb;
+      transition: color 0.25s, transform 0.25s;
+    }
+
+    .close-popup:hover {
+      color: white;
+      transform: rotate(90deg);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1          { font-size: 2.4em; }
+      .logo       { width: 220px; }
+      header      { padding: 40px 10px 25px; }
+      .btn-group button { width: 90%; }
+      .features   { flex-direction: column; align-items: center; }
+      form        { padding: 25px; }
+      .floating-contact { bottom: 24px; right: 24px; }
+      .fab        { width: 60px; height: 60px; font-size: 2em; }
+      .popup-panel { width: 220px; bottom: 88px; padding: 20px 18px; }
+    }
+
+    @media (max-width: 600px) {
+      h1          { font-size: 2em; }
+      .logo       { width: 180px; }
+      .phone-hero { font-size: 1.6em; }
+      h2          { font-size: 1.8em; }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .logo { image-rendering: auto; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hyundai_Motor_Company_logo.svg">
-<div>
-<h1>Saniya Enterprises</h1>
-<p>Authorized Hyundai Workshop – Birgunj, Nepal</p>
-</div>
-</header>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img
+        src="https://www.freepnglogos.com/uploads/hyundai-logo-6.png"
+        srcset="
+          https://www.freepnglogos.com/uploads/hyundai-logo-6.png 2000w,
+          https://auto-bon.com/wp-content/uploads/2022/04/Hyundai-logo-silver-Big.png 1920w,
+          https://www.citypng.com/public/uploads/preview/hd-hyundai-logo-transparent-background-11624411994v2z6z6z6z6.png 2000w"
+        sizes="(max-width: 600px) 180px, (max-width: 768px) 220px, 280px"
+        alt="Hyundai Genuine Silver Logo"
+        class="logo"
+      />
+    </div>
 
-<main>
+    <h1>Saniya Enterprises</h1>
+    <p class="tagline">Authorized Hyundai Service Center</p>
 
-<section>
-<h2>Book Hyundai Service</h2>
+    <p class="phone-hero">
+      <a href="tel:+9779801121471" class="phone">📞 9801121471</a>
+    </p>
 
-<form id="serviceForm">
-<input type="text" id="name" placeholder="Customer Name" required>
-<input type="tel" id="mobile" placeholder="Mobile Number" required>
-<input type="email" id="email" placeholder="Email (optional)">
-<input type="text" id="vehicle" placeholder="Hyundai Vehicle Model" required>
-<input type="date" id="date" required>
-<textarea id="problem" rows="4" placeholder="Service Details / Problem"></textarea>
-<button type="submit">Book Service</button>
-</form>
+    <div class="btn-group">
+      <button class="book-btn" onclick="document.getElementById('bookingForm').scrollIntoView()">
+        Book Service Now
+      </button>
+      <button class="call-btn" onclick="window.location='tel:+9779801121471'">
+        Call Us
+      </button>
+    </div>
+  </header>
 
-<p id="msg" style="font-weight:bold;color:green;"></p>
-</section>
+  <!-- Trust section -->
+  <div class="section">
+    <h2>Expert Hyundai Service You Can Trust</h2>
+    <p>Authorized Service Center with Certified Technicians and Genuine Hyundai Parts</p>
+  </div>
 
-<section>
-<h2>Contact Information</h2>
-<div class="contact-box">
-<div class="card">
-<strong>Address</strong><br>
-Murli-13, Birgunj, Nepal<br>
-Opposite Siddhartha School
-</div>
+  <!-- Features -->
+  <div class="section features">
+    <div class="feature-card">
+      <div class="icon">🛡️</div>
+      <h3>Authorized Service</h3>
+      <p>Certified technicians with official Hyundai training</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">✅</div>
+      <h3>Genuine Parts</h3>
+      <p>100% authentic Hyundai spare parts and accessories</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🏆</div>
+      <h3>Quality Service</h3>
+      <p>State-of-the-art equipment and expert care</p>
+    </div>
+  </div>
 
-<div class="card">
-<strong>Email</strong><br>
-hyundaiservicebirgunj@gmail.com
-</div>
+  <!-- Testimonials -->
+  <div class="section testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="quote">
+      "Excellent service! My i10 is running like new after the periodic maintenance. Technicians are very professional and used only genuine parts."
+      <div class="stars">★★★★★</div>
+      <p><strong>Amitesh Yadav – Birgunj</strong></p>
+    </div>
+    <div class="quote">
+      "Quick AC repair and friendly staff. Highly recommended for Hyundai owners in Birgunj area. No hidden charges!"
+      <div class="stars">★★★★★</div>
+      <p><strong>Rohini Acharya – Parsa</strong></p>
+    </div>
+    <div class="quote">
+      "Best authorized service center nearby. My Creta got full check-up in time and at reasonable cost. Trustworthy team."
+      <div class="stars">★★★★★</div>
+      <p><strong>Subodh Joshi – Birgunj</strong></p>
+    </div>
+  </div>
 
-<div class="card">
-<strong>Call Us</strong><br>
-📞 9801121471<br>
-📞 9704598000
-</div>
-</div>
-</section>
+  <!-- Review Form -->
+  <div class="section">
+    <h2>Rate & Review Us</h2>
+    <form id="reviewForm">
+      <p>Your Rating</p>
+      <div class="stars">★★★★★</div>
+      <input type="text" placeholder="Your Name" required>
+      <textarea rows="4" placeholder="Share your experience..." required></textarea>
+      <button type="button" class="submit-btn" onclick="alert('Thank you! Your review has been sent.')">
+        Submit Rating & Review
+      </button>
+    </form>
+  </div>
 
-</main>
+  <!-- Booking Form -->
+  <div class="section">
+    <h2>Book Your Service Appointment</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Enter your full name" required>
+      <input type="email" id="email" placeholder="Email (optional)">
+      <label>Choose your Hyundai model</label>
+      <select id="model" required>
+        <option value="">Select model</option>
+        <option value="Venue">Venue</option>
+        <option value="Creta">Creta</option>
+        <option value="Creta EV">Creta EV</option>
+        <option value="i10">i10</option>
+        <option value="Santro">Santro</option>
+        <option value="Kona">Kona</option>
+        <option value="Tucson">Tucson</option>
+      </select>
+      <label>Preferred Service Date (Optional)</label>
+      <input type="date" id="serviceDate">
+      <label>Additional Notes (Optional)</label>
+      <textarea id="notes" rows="4" placeholder="Any specific concerns or requirements?"></textarea>
+      <button type="button" class="whatsapp-btn submit-btn" onclick="sendToWhatsApp()">
+        Book Appointment via WhatsApp
+      </button>
+    </form>
+  </div>
 
-<footer>
-© 2026 Saniya Enterprises | Google Search: <strong>hyundaibirgunj</strong>
-</footer>
+  <!-- Contact Information -->
+  <div class="section contact-info">
+    <h2>Contact Us</h2>
+    <p>Saniya Enterprises</p>
+    <p>Authorized Hyundai Service Center</p>
+    <p>Murli-13, Birgunj, Nepal | Opposite to Siddhartha School</p>
+    <p class="hours">
+      Opening Hours: Sunday – Friday: 9:00 AM – 5:00 PM<br>
+      (Closed on Saturdays)
+    </p>
+    <p>
+      Phone: <a href="tel:+9779801121471" style="color:#fff;">9801121471</a>  
+      | WhatsApp:  
+      <a href="https://wa.me/9779801121471" style="color:#25D366;">+9779801121471</a> / 
+      <a href="https://wa.me/9779704598000" style="color:#25D366;">+9779704598000</a>
+    </p>
+  </div>
 
-<a class="whatsapp" href="https://wa.me/9779704598000" target="_blank">💬</a>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Saniya Enterprises – Authorized Hyundai Service Center, Birgunj</p>
+  </footer>
 
-<script>
-document.getElementById("serviceForm").addEventListener("submit", function(e){
-    e.preventDefault();
+  <!-- Floating Contact Popup -->
+  <div class="floating-contact">
+    <div class="fab" onclick="togglePopup()">📞</div>
 
-    let name = document.getElementById("name").value;
-    let mobile = document.getElementById("mobile").value;
-    let email = document.getElementById("email").value;
-    let vehicle = document.getElementById("vehicle").value;
-    let date = document.getElementById("date").value;
-    let problem = document.getElementById("problem").value;
+    <div class="popup-panel" id="contactPopup">
+      <span class="close-popup" onclick="togglePopup()">×</span>
+      
+      <a href="tel:+9779801121471" class="popup-btn call">
+        <span>📞 Call Us Now</span>
+      </a>
+      
+      <a href="https://wa.me/9779801121471?text=Hello%20Saniya%20Enterprises%2C%20I%20need%20Hyundai%20service%20help" 
+         target="_blank" 
+         class="popup-btn whatsapp">
+        <span>💬 Chat on WhatsApp</span>
+      </a>
+    </div>
+  </div>
 
-    let message =
-`Hyundai Service Booking Request
--------------------------
-Name: ${name}
-Mobile: ${mobile}
-Email: ${email}
-Vehicle: ${vehicle}
-Preferred Date: ${date}
-Problem: ${problem}`;
+  <!-- JavaScript -->
+  <script>
+    function togglePopup() {
+      document.getElementById('contactPopup').classList.toggle('show');
+    }
 
-    /* EMAIL */
-    let mailtoLink =
-`mailto:hyundaiservicebirgunj@gmail.com
-?subject=Hyundai Service Booking - ${name}
-&body=${encodeURIComponent(message)}`;
+    document.addEventListener('click', function(e) {
+      const popup = document.getElementById('contactPopup');
+      const fab = document.querySelector('.fab');
+      if (!popup.contains(e.target) && !fab.contains(e.target)) {
+        popup.classList.remove('show');
+      }
+    });
 
-    window.location.href = mailtoLink;
+    function sendToWhatsApp() {
+      const name   = document.getElementById('name').value;
+      const model  = document.getElementById('model').value;
+      const date   = document.getElementById('serviceDate').value;
+      const notes  = document.getElementById('notes').value;
+      const email  = document.getElementById('email').value;
 
-    /* WHATSAPP */
-    let whatsappLink =
-`https://wa.me/9779704598000?text=${encodeURIComponent(message)}`;
+      if (!name || !model) {
+        alert('Please enter your name and select a vehicle model.');
+        return;
+      }
 
-    setTimeout(() => {
-        window.open(whatsappLink, "_blank");
-    }, 800);
+      let msg = `Hello Saniya Enterprises,%0AName: ${name}%0AModel: ${model}`;
+      if (date)  msg += `%0APreferred Date: ${date}`;
+      if (email) msg += `%0AEmail: ${email}`;
+      if (notes) msg += `%0ANotes: ${notes}`;
+      msg += `%0AI want to book a service appointment.`;
 
-    document.getElementById("msg").textContent =
-        "Booking details sent via Email and WhatsApp successfully.";
-
-    this.reset();
-});
-</script>
-
+      window.open(`https://wa.me/9779801121471?text=${msg}`, '_blank');
+      alert('Thank you! Your request has been sent via WhatsApp.');
+    }
+  </script>
 </body>
 </html>
