@@ -6,12 +6,7 @@
   <title>Saniya Enterprises – Authorized Hyundai Service Center | Birgunj</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #002c77;
@@ -19,16 +14,13 @@
       line-height: 1.6;
     }
 
-    /* ── Header ──────────────────────────────────────── */
     header {
       background: linear-gradient(to bottom, #002c77, #003366);
       text-align: center;
       padding: 50px 15px 30px;
     }
 
-    .logo-container {
-      margin-bottom: 25px;
-    }
+    .logo-container { margin-bottom: 25px; }
 
     .logo {
       width: 280px;
@@ -41,28 +33,10 @@
       image-rendering: crisp-edges;
     }
 
-    h1 {
-      font-size: 3em;
-      margin: 15px 0 10px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }
-
-    .tagline {
-      font-size: 1.4em;
-      opacity: 0.95;
-      margin-bottom: 20px;
-    }
-
-    .phone-hero {
-      font-size: 2em;
-      font-weight: bold;
-      margin: 25px 0;
-    }
-
-    a.phone {
-      color: #fff;
-      text-decoration: none;
-    }
+    h1 { font-size: 3em; margin: 15px 0 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); }
+    .tagline { font-size: 1.4em; opacity: 0.95; margin-bottom: 20px; }
+    .phone-hero { font-size: 2em; font-weight: bold; margin: 25px 0; }
+    a.phone { color: #fff; text-decoration: none; }
 
     .btn-group {
       display: flex;
@@ -71,7 +45,7 @@
       gap: 15px;
     }
 
-    .btn-group button {
+    .btn-group button, button.submit-btn {
       width: 80%;
       max-width: 400px;
       padding: 18px;
@@ -84,30 +58,13 @@
 
     .book-btn { background: #004080; color: white; }
     .book-btn:hover { background: #0055aa; }
-
     .call-btn { background: #d32f2f; color: white; }
     .call-btn:hover { background: #b71c1c; }
 
-    /* ── Content sections ────────────────────────────── */
-    .section {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+    .section { max-width: 1100px; margin: 50px auto; padding: 0 20px; text-align: center; }
+    h2 { font-size: 2.2em; margin-bottom: 20px; }
 
-    h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
     .feature-card {
       background: rgba(255,255,255,0.08);
       padding: 30px;
@@ -116,11 +73,7 @@
       max-width: 100%;
       backdrop-filter: blur(6px);
     }
-
-    .icon {
-      font-size: 3.5em;
-      margin-bottom: 15px;
-    }
+    .icon { font-size: 3.5em; margin-bottom: 15px; }
 
     .testimonials .quote {
       background: rgba(255,255,255,0.06);
@@ -129,14 +82,8 @@
       margin: 30px 0;
       font-style: italic;
     }
+    .stars { color: #ffd700; font-size: 2em; margin: 12px 0; }
 
-    .stars {
-      color: #ffd700;
-      font-size: 2em;
-      margin: 12px 0;
-    }
-
-    /* ── Forms ───────────────────────────────────────── */
     form {
       background: rgba(255,255,255,0.08);
       padding: 35px;
@@ -145,9 +92,7 @@
       margin: 0 auto 50px;
     }
 
-    input,
-    textarea,
-    select {
+    input, textarea, select {
       width: 100%;
       padding: 14px;
       margin: 12px 0;
@@ -166,25 +111,12 @@
       cursor: pointer;
       border: none;
     }
+    button.submit-btn:hover { background: #0055aa; }
 
-    button.submit-btn:hover {
-      background: #0055aa;
-    }
+    .whatsapp-btn { background: #25D366; }
+    .whatsapp-btn:hover { background: #128C7E; }
 
-    .whatsapp-btn {
-      background: #25D366;
-    }
-
-    .whatsapp-btn:hover {
-      background: #128C7E;
-    }
-
-    /* ── Contact & Footer ────────────────────────────── */
-    .contact-info {
-      font-size: 1.3em;
-      margin: 40px 0;
-    }
-
+    .contact-info { font-size: 1.3em; margin: 40px 0; }
     footer {
       background: #001122;
       padding: 25px;
@@ -192,7 +124,7 @@
       font-size: 1em;
     }
 
-    /* ── Floating contact popup ──────────────────────── */
+    /* Floating contact popup */
     .floating-contact {
       position: fixed;
       bottom: 30px;
@@ -241,10 +173,7 @@
       gap: 16px;
       opacity: 0;
       transform: translateY(35px) scale(0.94);
-      transition:
-        opacity 0.32s ease-out,
-        transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
-        backdrop-filter 0.4s ease;
+      transition: opacity 0.32s ease-out, transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1), backdrop-filter 0.4s ease;
       backdrop-filter: blur(0px);
     }
 
@@ -298,22 +227,22 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      h1          { font-size: 2.4em; }
-      .logo       { width: 220px; }
-      header      { padding: 40px 10px 25px; }
+      h1 { font-size: 2.4em; }
+      .logo { width: 220px; }
+      header { padding: 40px 10px 25px; }
       .btn-group button { width: 90%; }
-      .features   { flex-direction: column; align-items: center; }
-      form        { padding: 25px; }
+      .features { flex-direction: column; align-items: center; }
+      form { padding: 25px; }
       .floating-contact { bottom: 24px; right: 24px; }
-      .fab        { width: 60px; height: 60px; font-size: 2em; }
+      .fab { width: 60px; height: 60px; font-size: 2em; }
       .popup-panel { width: 220px; bottom: 88px; padding: 20px 18px; }
     }
 
     @media (max-width: 600px) {
-      h1          { font-size: 2em; }
-      .logo       { width: 180px; }
+      h1 { font-size: 2em; }
+      .logo { width: 180px; }
       .phone-hero { font-size: 1.6em; }
-      h2          { font-size: 1.8em; }
+      h2 { font-size: 1.8em; }
     }
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -454,7 +383,6 @@
     <p>
       Phone: <a href="tel:+9779801121471" style="color:#fff;">9801121471</a>  
       | WhatsApp:  
-      <a href="https://wa.me/9779801121471" style="color:#25D366;">+9779801121471</a> / 
       <a href="https://wa.me/9779704598000" style="color:#25D366;">+9779704598000</a>
     </p>
   </div>
@@ -475,7 +403,7 @@
         <span>📞 Call Us Now</span>
       </a>
       
-      <a href="https://wa.me/9779801121471?text=Hello%20Saniya%20Enterprises%2C%20I%20need%20Hyundai%20service%20help" 
+      <a href="https://wa.me/9779704598000?text=Hello%20Saniya%20Enterprises%2C%20I%20need%20Hyundai%20service%20help" 
          target="_blank" 
          class="popup-btn whatsapp">
         <span>💬 Chat on WhatsApp</span>
@@ -515,9 +443,10 @@
       if (notes) msg += `%0ANotes: ${notes}`;
       msg += `%0AI want to book a service appointment.`;
 
-      window.open(`https://wa.me/9779801121471?text=${msg}`, '_blank');
+      window.open(`https://wa.me/9779704598000?text=${msg}`, '_blank');
       alert('Thank you! Your request has been sent via WhatsApp.');
     }
   </script>
+
 </body>
-</html>
+                                     </html>
