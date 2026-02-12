@@ -1,452 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saniya Enterprises – Authorized Hyundai Service Center | Birgunj</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authorized Hyundai service Birgunj – Saniya Enterprises 2S Outlet offers Hyundai service Birgunj, genuine spares, new vehicle sales & certified maintenance.">
+  <meta name="keywords" content="Hyundai service Birgunj, authorized Hyundai service Birgunj, Hyundai Birgunj, Creta EV Birgunj, book Hyundai service">
+  <title>Saniya Enterprises – Authorized Hyundai 2S Outlet | Hyundai Service Birgunj</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #002c77;
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+                  url('https://www.hyundai.com/content/dam/hyundai/ww/data/cars/creta-ev/2025/creta-ev-main-visual-pc.jpg') center/cover no-repeat;
       color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(to bottom, #002c77, #003366);
+      padding: 160px 0;
       text-align: center;
-      padding: 50px 15px 30px;
-    }
-
-    .logo-container { margin-bottom: 25px; }
-
-    .logo {
-      width: 280px;
-      height: auto;
-      max-width: 90%;
-      display: block;
-      margin: 0 auto;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
-    }
-
-    h1 { font-size: 3em; margin: 15px 0 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); }
-    .tagline { font-size: 1.4em; opacity: 0.95; margin-bottom: 20px; }
-    .phone-hero { font-size: 2em; font-weight: bold; margin: 25px 0; }
-    a.phone { color: #fff; text-decoration: none; }
-
-    .btn-group {
+      min-height: 70vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 15px;
     }
-
-    .btn-group button, button.submit-btn {
-      width: 80%;
-      max-width: 400px;
-      padding: 18px;
-      font-size: 1.3em;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .book-btn { background: #004080; color: white; }
-    .book-btn:hover { background: #0055aa; }
-    .call-btn { background: #d32f2f; color: white; }
-    .call-btn:hover { background: #b71c1c; }
-
-    .section { max-width: 1100px; margin: 50px auto; padding: 0 20px; text-align: center; }
-    h2 { font-size: 2.2em; margin-bottom: 20px; }
-
-    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    .feature-card {
-      background: rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 16px;
-      width: 320px;
-      max-width: 100%;
-      backdrop-filter: blur(6px);
-    }
-    .icon { font-size: 3.5em; margin-bottom: 15px; }
-
-    .testimonials .quote {
-      background: rgba(255,255,255,0.06);
-      padding: 25px;
-      border-radius: 12px;
-      margin: 30px 0;
-      font-style: italic;
-    }
-    .stars { color: #ffd700; font-size: 2em; margin: 12px 0; }
-
-    form {
-      background: rgba(255,255,255,0.08);
-      padding: 35px;
-      border-radius: 16px;
-      max-width: 650px;
-      margin: 0 auto 50px;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 14px;
-      margin: 12px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-    }
-
-    button.submit-btn {
-      background: #004080;
-      color: white;
-      width: 100%;
-      padding: 16px;
-      font-size: 1.3em;
-      border-radius: 50px;
-      cursor: pointer;
-      border: none;
-    }
-    button.submit-btn:hover { background: #0055aa; }
-
-    .whatsapp-btn { background: #25D366; }
-    .whatsapp-btn:hover { background: #128C7E; }
-
-    .contact-info { font-size: 1.3em; margin: 40px 0; }
-    footer {
-      background: #001122;
-      padding: 25px;
-      text-align: center;
-      font-size: 1em;
-    }
-
-    /* Floating contact popup */
-    .floating-contact {
+    .section-padding { padding: 80px 0; }
+    .card { border: none; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-8px); }
+    .hyundai-blue { color: #003087; }
+    .navbar-brand img { height: 50px; }
+    .fixed-whatsapp, .fixed-call {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      right: 20px;
       z-index: 1000;
-    }
-
-    .fab {
-      width: 66px;
-      height: 66px;
-      background: #004080;
-      color: white;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.1em;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      animation: gentle-breath 4.5s infinite ease-in-out;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
-
-    .fab:hover {
-      transform: scale(1.14) translateY(-5px);
-      background: #0055aa;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
-    }
-
-    @keyframes gentle-breath {
-      0%, 100% { transform: scale(1); }
-      50%      { transform: scale(1.065); }
-    }
-
-    .popup-panel {
-      position: absolute;
-      bottom: 95px;
-      right: 0;
-      background: #003366;
-      border-radius: 18px;
-      padding: 22px 20px 26px;
-      width: 250px;
-      box-shadow: 0 14px 45px rgba(0,0,0,0.55);
-      display: none;
-      flex-direction: column;
-      gap: 16px;
-      opacity: 0;
-      transform: translateY(35px) scale(0.94);
-      transition: opacity 0.32s ease-out, transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1), backdrop-filter 0.4s ease;
-      backdrop-filter: blur(0px);
-    }
-
-    .popup-panel.show {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      backdrop-filter: blur(8px);
-    }
-
-    .popup-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 15px 20px;
-      border-radius: 14px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.08em;
-      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
-    }
-
-    .popup-btn:hover {
-      transform: translateY(-4px) scale(1.045);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.45);
-    }
-
-    .popup-btn.call { background: #d32f2f; }
-    .popup-btn.call:hover { background: #c62828; }
-
-    .popup-btn.whatsapp { background: #25D366; }
-    .popup-btn.whatsapp:hover { background: #1da851; }
-
-    .close-popup {
-      position: absolute;
-      top: 10px;
-      right: 14px;
-      font-size: 1.7em;
-      cursor: pointer;
-      color: #bbb;
-      transition: color 0.25s, transform 0.25s;
-    }
-
-    .close-popup:hover {
-      color: white;
-      transform: rotate(90deg);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      h1 { font-size: 2.4em; }
-      .logo { width: 220px; }
-      header { padding: 40px 10px 25px; }
-      .btn-group button { width: 90%; }
-      .features { flex-direction: column; align-items: center; }
-      form { padding: 25px; }
-      .floating-contact { bottom: 24px; right: 24px; }
-      .fab { width: 60px; height: 60px; font-size: 2em; }
-      .popup-panel { width: 220px; bottom: 88px; padding: 20px 18px; }
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 2em; }
-      .logo { width: 180px; }
-      .phone-hero { font-size: 1.6em; }
-      h2 { font-size: 1.8em; }
-    }
-
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .logo { image-rendering: auto; }
-    }
+    .fixed-whatsapp { bottom: 20px; background: #25D366; color: white; }
+    .fixed-call { bottom: 100px; background: #007bff; color: white; }
+    .gallery-img { height: 260px; object-fit: cover; border-radius: 10px; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo-container">
-      <img
-        src="https://www.freepnglogos.com/uploads/hyundai-logo-6.png"
-        srcset="
-          https://www.freepnglogos.com/uploads/hyundai-logo-6.png 2000w,
-          https://auto-bon.com/wp-content/uploads/2022/04/Hyundai-logo-silver-Big.png 1920w,
-          https://www.citypng.com/public/uploads/preview/hd-hyundai-logo-transparent-background-11624411994v2z6z6z6z6.png 2000w"
-        sizes="(max-width: 600px) 180px, (max-width: 768px) 220px, 280px"
-        alt="Hyundai Genuine Silver Logo"
-        class="logo"
-      />
-    </div>
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/9779704598000?text=Hello%2C%20I%20want%20to%20book%20Hyundai%20service%20in%20Birgunj" class="fixed-whatsapp"><i class="fab fa-whatsapp fa-2x"></i></a>
+  <a href="tel:+9779801121471" class="fixed-call"><i class="fas fa-phone fa-2x"></i></a>
 
-    <h1>Saniya Enterprises</h1>
-    <p class="tagline">Authorized Hyundai Service Center</p>
-
-    <p class="phone-hero">
-      <a href="tel:+9779801121471" class="phone">📞 9801121471</a>
-    </p>
-
-    <div class="btn-group">
-      <button class="book-btn" onclick="document.getElementById('bookingForm').scrollIntoView()">
-        Book Service Now
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg" alt="Hyundai Logo">
+        Hyundai Birgunj – 2S
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <button class="call-btn" onclick="window.location='tel:+9779801121471'">
-        Call Us
-      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#creta-ev">Creta EV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book-service">Book Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Trust section -->
-  <div class="section">
-    <h2>Expert Hyundai Service You Can Trust</h2>
-    <p>Authorized Service Center with Certified Technicians and Genuine Hyundai Parts</p>
-  </div>
+  <!-- Hero Section with Creta EV background -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Hyundai Service Birgunj</h1>
+      <h3 class="mt-3">Authorized 2S Outlet – Saniya Enterprises</h3>
+      <p class="lead mt-4">Sales • Genuine Spares • Certified Service</p>
+      <div class="mt-5">
+        <a href="https://wa.me/9779704598000?text=Book%20Hyundai%20service%20in%20Birgunj" class="btn btn-lg btn-success me-3">
+          <i class="fab fa-whatsapp"></i> Book via WhatsApp
+        </a>
+        <a href="tel:+9779801121471" class="btn btn-lg btn-outline-light">
+          <i class="fas fa-phone"></i> Call 9801121471
+        <a href="tel:+9779704598000" class="btn btn-lg btn-outline-light">
+          <i class="fas fa-phone"></i> Call
+             9704598000
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Features -->
-  <div class="section features">
-    <div class="feature-card">
-      <div class="icon">🛡️</div>
-      <h3>Authorized Service</h3>
-      <p>Certified technicians with official Hyundai training</p>
+  <!-- Authorization Bar -->
+  <section class="py-4 bg-primary text-white text-center">
+    <div class="container">
+      <h4>Official Authorization by Laxmi Hyundai Nepal</h4>
     </div>
-    <div class="feature-card">
-      <div class="icon">✅</div>
-      <h3>Genuine Parts</h3>
-      <p>100% authentic Hyundai spare parts and accessories</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">🏆</div>
-      <h3>Quality Service</h3>
-      <p>State-of-the-art equipment and expert care</p>
-    </div>
-  </div>
+  </section>
 
-  <!-- Testimonials -->
-  <div class="section testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="quote">
-      "Excellent service! My i10 is running like new after the periodic maintenance. Technicians are very professional and used only genuine parts."
-      <div class="stars">★★★★★</div>
-      <p><strong>Amitesh Yadav – Birgunj</strong></p>
+  <!-- About -->
+  <section id="about" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="text-center hyundai-blue mb-5">Hyundai Service Center Birgunj</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>Saniya Enterprises is your trusted authorized Hyundai 2S outlet in Birgunj. We provide expert maintenance, 100% genuine parts, and new vehicle sales – all approved by Laxmi Hyundai.</p>
+          <p><strong>Address:</strong> Murli-13, Opposite Siddhartha School, Birgunj, Nepal</p>
+        </div>
+        <div class="col-md-6">
+          <img srcimg src="lift.jpg" width="400">
+          <p class="text-center mt-2 small text-muted">Our certified service team at work</p>
+        </div>
+      </div>
     </div>
-    <div class="quote">
-      "Quick AC repair and friendly staff. Highly recommended for Hyundai owners in Birgunj area. No hidden charges!"
-      <div class="stars">★★★★★</div>
-      <p><strong>Rohini Acharya – Parsa</strong></p>
+  </section>
+
+  <!-- Creta EV Showcase -->
+  <section id="creta-ev" class="section-padding">
+    <div class="container">
+      <h2 class="text-center hyundai-blue mb-5">Hyundai Creta EV – Now at Birgunj</h2>
+      <div class="row g-4">
+        <div class="col-12">
+          <img src="cretaev.jpg" 
+               alt="Hyundai Creta EV on showroom floor" class="img-fluid rounded shadow w-100">
+        </div>
+        <!-- Add more Creta EV photos here when you have them -->
+        <!-- <div class="col-md-6"><img src="images/creta-ev-2.jpg" class="gallery-img w-100" alt="Creta EV side view"></div> -->
+        <!-- <div class="col-md-6"><img src="images/creta-ev-interior.jpg" class="gallery-img w-100" alt="Creta EV interior"></div> -->
+      </div>
+      <p class="text-center mt-4 lead">Experience the future of driving – Book your Creta EV service or test drive today!</p>
     </div>
-    <div class="quote">
-      "Best authorized service center nearby. My Creta got full check-up in time and at reasonable cost. Trustworthy team."
-      <div class="stars">★★★★★</div>
-      <p><strong>Subodh Joshi – Birgunj</strong></p>
+  </section>
+
+  <!-- Book Service -->
+  <section id="book-service" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="text-center hyundai-blue mb-5">Book Your Hyundai Service</h2>
+      <p class="text-center lead mb-5">Fast & easy booking – get instant confirmation via WhatsApp</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="bookingForm">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label class="form-label fw-bold">Service Type</label>
+                <select class="form-select" id="serviceType" required>
+                  <option value="">Select Service</option>
+                  <option value="Periodic Maintenance">Periodic Maintenance / Oil Change</option>
+                  <option value="AC Repair & Service">AC Repair & Service</option>
+                  <option value="Full Vehicle Check-up">Full Vehicle Check-up</option>
+                  <option value="Brake & Suspension">Brake & Suspension Service</option>
+                  <option value="EV / Battery Check">EV / Battery Check (Creta EV etc.)</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label class="form-label fw-bold">Vehicle Model</label>
+                <select class="form-select" id="vehicleModel" required>
+                  <option value="">Select Model</option>
+                  <option value="Creta EV">Creta EV</option>
+                  <option value="Creta">Creta</option>
+                  <option value="Venue">Venue</option>
+                  <option value="Exter">Exter</option>
+                   <option value="Santa fe">Santa fe</option>
+                   <option value="Kona">Kona</option>
+                    <option value="Ionic">Ionic</option>
+                   <option value="I20">I20</option>
+                   <option value="Santro">Santro</option>
+                   <option value="Tucson">Tucson</option>
+                  <option value="Grand i10">Grand i10</option>
+                  <!-- ... other models ... -->
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label class="form-label fw-bold">Preferred Date</label>
+                <input type="date" class="form-control" id="preferredDate" required>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label class="form-label fw-bold">Preferred Time</label>
+                <select class="form-select" id="preferredTime" required>
+                  <option value="">Select Slot</option>
+                  <option>9:00 AM - 11:00 AM</option>
+                  <option>11:00 AM - 1:00 PM</option>
+                  <option>1:00 PM - 3:00 PM</option>
+                  <option>3:00 PM - 5:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="button" onclick="sendWhatsAppBooking()" class="btn btn-success btn-lg px-5">
+                <i class="fab fa-whatsapp"></i> Send Booking Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Review Form -->
-  <div class="section">
-    <h2>Rate & Review Us</h2>
-    <form id="reviewForm">
-      <p>Your Rating</p>
-      <div class="stars">★★★★★</div>
-      <input type="text" placeholder="Your Name" required>
-      <textarea rows="4" placeholder="Share your experience..." required></textarea>
-      <button type="button" class="submit-btn" onclick="alert('Thank you! Your review has been sent.')">
-        Submit Rating & Review
-      </button>
-    </form>
-  </div>
+  <!-- Services Offered -->
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="text-center hyundai-blue mb-5">Our Hyundai Services</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4"><div class="card p-4"><i class="fas fa-tools fa-3x hyundai-blue mb-3"></i><h5>Periodic Service</h5><p>Regular maintenance & health check</p></div></div>
+        <div class="col-md-4"><div class="card p-4"><i class="fas fa-bolt fa-3x hyundai-blue mb-3"></i><h5>EV Service</h5><p>Battery & charging system check</p></div></div>
+        <div class="col-md-4"><div class="card p-4"><i class="fas fa-cogs fa-3x hyundai-blue mb-3"></i><h5>Genuine Parts</h5><p>100% authentic Hyundai spares</p></div></div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Booking Form -->
-  <div class="section">
-    <h2>Book Your Service Appointment</h2>
-    <form id="bookingForm">
-      <input type="text" id="name" placeholder="Enter your full name" required>
-      <input type="email" id="email" placeholder="Email (optional)">
-      <label>Choose your Hyundai model</label>
-      <select id="model" required>
-        <option value="">Select model</option>
-        <option value="Venue">Venue</option>
-        <option value="Creta">Creta</option>
-        <option value="Creta EV">Creta EV</option>
-        <option value="i10">i10</option>
-        <option value="Santro">Santro</option>
-        <option value="Kona">Kona</option>
-        <option value="Tucson">Tucson</option>
-      </select>
-      <label>Preferred Service Date (Optional)</label>
-      <input type="date" id="serviceDate">
-      <label>Additional Notes (Optional)</label>
-      <textarea id="notes" rows="4" placeholder="Any specific concerns or requirements?"></textarea>
-      <button type="button" class="whatsapp-btn submit-btn" onclick="sendToWhatsApp()">
-        Book Appointment via WhatsApp
-      </button>
-    </form>
-  </div>
-
-  <!-- Contact Information -->
-  <div class="section contact-info">
-    <h2>Contact Us</h2>
-    <p>Saniya Enterprises</p>
-    <p>Authorized Hyundai Service Center</p>
-    <p>Murli-13, Birgunj, Nepal | Opposite to Siddhartha School</p>
-    <p class="hours">
-      Opening Hours: Sunday – Friday: 9:00 AM – 5:00 PM<br>
-      (Closed on Saturdays)
-    </p>
-    <p>
-      Phone: <a href="tel:+9779801121471" style="color:#fff;">9801121471</a>  
-      | WhatsApp:  
-      <a href="https://wa.me/9779704598000" style="color:#25D366;">+9779704598000</a>
-    </p>
-  </div>
+  <!-- Contact -->
+  <section id="contact" class="section-padding bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Get in Touch</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p><i class="fas fa-map-marker-alt me-2"></i>Murli-13, Opposite Siddhartha School, Birgunj</p>
+          <p><i class="fas fa-phone me-2"></i>9801121471</p>
+          <p><i class="fab fa-whatsapp me-2"></i>+977 9704598000</p>
+          <p><i class="fas fa-envelope me-2"></i><a href="mailto:hyundaiservicebirgunj@gmail.com" class="text-white">hyundaiservicebirgunj@gmail.com</a></p>
+          <p><i class="fas fa-clock me-2"></i>Sunday–Friday: 9 AM – 5 PM</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2026 Saniya Enterprises – Authorized Hyundai Service Center, Birgunj</p>
+  <footer class="bg-black text-white text-center py-4">
+    <p>© 2026 Saniya Enterprises – Authorized Hyundai 2S Outlet, Birgunj</p>
+    <p><small>Approved by Laxmi Intercontinental Pvt. Ltd. | <a href="https://laxmihyundai.com" class="text-white" target="_blank">laxmihyundai.com</a></small></p>
   </footer>
 
-  <!-- Floating Contact Popup -->
-  <div class="floating-contact">
-    <div class="fab" onclick="togglePopup()">📞</div>
-
-    <div class="popup-panel" id="contactPopup">
-      <span class="close-popup" onclick="togglePopup()">×</span>
-      
-      <a href="tel:+9779801121471" class="popup-btn call">
-        <span>📞 Call Us Now</span>
-      </a>
-      
-      <a href="https://wa.me/9779704598000?text=Hello%20Saniya%20Enterprises%2C%20I%20need%20Hyundai%20service%20help" 
-         target="_blank" 
-         class="popup-btn whatsapp">
-        <span>💬 Chat on WhatsApp</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- JavaScript -->
+  <!-- WhatsApp Booking Script -->
   <script>
-    function togglePopup() {
-      document.getElementById('contactPopup').classList.toggle('show');
-    }
+    function sendWhatsAppBooking() {
+      const service = document.getElementById('serviceType').value;
+      const vehicle = document.getElementById('vehicleModel').value;
+      const date = document.getElementById('preferredDate').value;
+      const time = document.getElementById('preferredTime').value;
 
-    document.addEventListener('click', function(e) {
-      const popup = document.getElementById('contactPopup');
-      const fab = document.querySelector('.fab');
-      if (!popup.contains(e.target) && !fab.contains(e.target)) {
-        popup.classList.remove('show');
-      }
-    });
-
-    function sendToWhatsApp() {
-      const name   = document.getElementById('name').value;
-      const model  = document.getElementById('model').value;
-      const date   = document.getElementById('serviceDate').value;
-      const notes  = document.getElementById('notes').value;
-      const email  = document.getElementById('email').value;
-
-      if (!name || !model) {
-        alert('Please enter your name and select a vehicle model.');
+      if (!service || !vehicle || !date || !time) {
+        alert('Please complete all fields');
         return;
       }
 
-      let msg = `Hello Saniya Enterprises,%0AName: ${name}%0AModel: ${model}`;
-      if (date)  msg += `%0APreferred Date: ${date}`;
-      if (email) msg += `%0AEmail: ${email}`;
-      if (notes) msg += `%0ANotes: ${notes}`;
-      msg += `%0AI want to book a service appointment.`;
+      const message = `Hello! Booking request for Hyundai service Birgunj\n\n` +
+                      `Service: ${service}\n` +
+                      `Vehicle: ${vehicle}\n` +
+                      `Date: ${date}\n` +
+                      `Time: ${time}\n\n` +
+                      `Thank you!`;
 
-      window.open(`https://wa.me/9779704598000?text=${msg}`, '_blank');
-      alert('Thank you! Your request has been sent via WhatsApp.');
+      const url = `https://wa.me/9779704598000?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
     }
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-                                     </html>
+</html>
